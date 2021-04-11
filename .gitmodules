@@ -1,0 +1,3 @@
+[submodule "backend/markov-chain-text-generator"]
+	path = backend/markov-chain-text-generator
+	url = https://github.com/3w36zj6/markov-chain-text-generator.git
