@@ -1,0 +1,17 @@
+#!/bin/bash
+
+count=60
+
+while :
+do
+    sleep 1
+    count=$((count - 1))
+    echo "ツイート可能まで後 $count 秒" > /tmp/count.log
+    if [[ $count -lt 0 ]]; then
+        break
+    fi
+done
+
+echo "ツイートできます" > /tmp/count.log
+
+exit 0
