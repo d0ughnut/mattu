@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# verify that the lock process is alive.
+killall -0 lock_tw > /dev/null 2>&1
+
+exit $?
