@@ -5,6 +5,10 @@
   <title>mattu</title>
 </head>
 <body>
-aaa
+<?php
+
+echo 'hello, world!';
+
+?>
 </body>
 </html>
