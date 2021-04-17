@@ -5,23 +5,56 @@
 html {
   margin: 0;
   font-family: arial;
+}
+
+.disp {
+  width: 100vw;
   height: 100vh;
-  background: #ccc;
+}
+
+.bg {
+  background-image: url(../img/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+  display: block;
+}
+
+.bg:before{
+  content: '';
+  background: inherit;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  z-index: -1;
 }
 
 .tab-container {
   list-style-type: none;
   padding: 0;
-  margin: 60px auto;
   max-width: 300px;
+  min-height: 50px;
   position: relative;
   background: #fff;
-
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
 .tab-container ul {
   list-style-type: none;
   padding: 0;
 }
+
 .tab-container .tab-content-container {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -33,11 +66,12 @@ html {
   background: #fff;
   position: absolute;
   top: 42px;
-  padding: 0px 40px 0 20px;
+  padding: 0px 20px 0 20px;
   border: 2px solid #446CB3;
   border-top: 0;
   box-shadow: 0 5px 5px -5px #333;
 }
+
 .tab-container .tab-content-container .tab-content {
   opacity: 0;
   padding: 15px 0;
@@ -83,18 +117,49 @@ html {
   opacity: 1;
 }
 
-.btn-flat-simple {
-  position: relative;
-  display: inline-block;
-  font-weight: bold;
-  padding: 0.25em 0.75em;
+.button {
+  background-color: #00acee;
+  border: none;
+  color: white;
+  width: 100%;
+  padding: 10px 15px;
+  text-align: center;
   text-decoration: none;
-  color: #00BCD4;
-  background: #ECECEC;
-  transition: .4s;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.btn-flat-simple:hover {
-  background: #00bcd4;
-  color: white;
+.user-box {
+  position: relative;
+}
+
+.user-box input {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #2d2d2d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid #2d2d2d;
+  outline: none;
+  background: transparent;
+}
+.user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #2d2d2d;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #00acee;
+  font-size: 12px;
 }
