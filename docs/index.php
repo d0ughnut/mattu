@@ -33,13 +33,13 @@
         <h3>状態:</h3>
         <?php
           $server_root = getenv('SERVER_ROOT');
-          $msg = file_get_contents("${server_root}/val/countdown");
+          $msg = file_get_contents("${server_root}/data/tweet_status");
           echo "<p>${msg}</p>"
         ?>
         <h3>最終ツイート時刻:</h3>
         <?php
           $server_root = getenv('SERVER_ROOT');
-          $msg = file_get_contents("${server_root}/val/last_tweet_time");
+          $msg = file_get_contents("${server_root}/data/last_tweet_time");
           echo "<p>";
           echo date('Y/m/d G:i:s', ${msg});
           echo "</p>";
